@@ -11,17 +11,18 @@ import axios from "axios";
 //   return "http://192.168.1.9:5000/api";
 // };
 const getBaseURL = () => {
-  // Check if we're accessing via public IP
+  // Check if we're accessing via GitHub Pages (production)
   if (window.location.hostname === 'jadhavx01.github.io') {
     return "http://122.162.238.167:5000/api";
   }
-  // Check if we're in development
+  // Check if we're in development (localhost)
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     return "http://localhost:5000/api";
   }
-  // Use the configured IP for local network access
-  return "http://192.168.1.32:5000/api";
+  // Use the public IP for local network access
+  return "http://122.162.238.167:5000/api";
 };
+
 
 
 const API = axios.create({
