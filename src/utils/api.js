@@ -12,7 +12,7 @@ import axios from "axios";
 // };
 const getBaseURL = () => {
   // Check if we're accessing via public IP
-  if (window.location.hostname === '122.162.238.167') {
+  if (window.location.hostname === 'jadhavx01.github.io') {
     return "http://122.162.238.167:5000/api";
   }
   // Check if we're in development
