@@ -1,0 +1,367 @@
+/* ========== CONTAINER ========== */
+.settingsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ========== HEADER ========== */
+.settingsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.settingsTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.settingsSubtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.warningAlert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fef3c7;
+  border: 2px solid #fcd34d;
+  border-radius: 12px;
+  color: #b45309;
+  font-weight: 600;
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== LOADING STATE ========== */
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.loadingSpinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.loadingSpinner p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* ========== RATE SECTIONS ========== */
+.rateSection {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+}
+
+.rateSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.rateSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rateSectionTitle h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.rateSectionTitle p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.metalBadge,
+.metalBadgeSilver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metalBadge {
+  background: linear-gradient(to bottom right, #fbbf24, #d97706);
+  color: #ffffff;
+}
+
+.metalBadgeSilver {
+  background: linear-gradient(to bottom right, #e5e7eb, #d1d5db);
+  color: #374151;
+}
+
+/* ========== RATE GRID ========== */
+.rateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ========== RATE CARD ========== */
+.rateCard {
+  background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.rateCard:hover {
+  border-color: #a855f7;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+}
+
+.rateCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rateCardTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.metalType,
+.metalTypeSilver {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.metalType {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.metalTypeSilver {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ========== FORM GROUP ========== */
+.formGroup {
+  margin-bottom: 12px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #374151;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+
+.formInput:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+  outline: none;
+}
+
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ========== RATE PREVIEW ========== */
+.ratePreview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: linear-gradient(to right, #f3e8ff, #e9d5ff);
+  border-radius: 8px;
+  border-left: 4px solid #a855f7;
+  margin-top: 12px;
+}
+
+.previewLabel {
+  font-size: 12px;
+  font-weight: bold;
+  color: #7e22ce;
+}
+
+.previewValue {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a855f7;
+}
+
+/* ========== ACTION BAR ========== */
+.actionBar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  bottom: 20px;
+}
+
+.primaryBtn {
+  background: linear-gradient(to right, #a855f7, #9333ea) !important;
+  color: #ffffff !important;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none !important;
+  transition: all 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
+}
+
+.primaryBtn:hover:not(:disabled) {
+  background: linear-gradient(to right, #9333ea, #7e22ce) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(168, 85, 247, 0.4);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryBtn {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 2px solid #e5e7eb !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover:not(:disabled) {
+  background: #e5e7eb !important;
+  border-color: #d1d5db !important;
+}
+
+.secondaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========== INFO BOX ========== */
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+  border: 2px solid #7dd3fc;
+  border-radius: 12px;
+  color: #0369a1;
+}
+
+.infoTitle {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
+
+.infoText {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .rateSection {
+    padding: 16px;
+  }
+
+  .rateGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .settingsHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actionBar {
+    flex-direction: column-reverse;
+    position: static;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+  }
+}

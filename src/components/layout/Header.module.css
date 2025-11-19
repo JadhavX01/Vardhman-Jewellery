@@ -1,0 +1,526 @@
+/* ===========================
+   HEADER - LUXURY THEME
+   Dark Glass Black + Royal Gold
+   =========================== */
+
+/* Header Container */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(12, 12, 12, 0.95);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Header Content */
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  gap: 12px;
+}
+
+@media (min-width: 480px) {
+  .headerContent {
+    height: 64px;
+    gap: 16px;
+  }
+}
+
+/* ===========================
+   LOGO SECTION
+   =========================== */
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 480px) {
+  .logoSection {
+    gap: 24px;
+  }
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
+
+.menuIcon {
+  width: 20px;
+  height: 20px;
+  color: #D4AF37;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 480px) {
+  .menuIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.mobileMenuBtn:hover .menuIcon {
+  color: #EFE1C6;
+  transform: rotate(90deg);
+}
+
+/* Logo Link */
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.logoLink:hover {
+  opacity: 0.85;
+}
+
+/* Logo Image - Smaller */
+.logoImage {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+}
+
+@media (min-width: 480px) {
+  .logoImage {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.logoImage:hover {
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transform: scale(1.05);
+}
+
+/* Logo Name - Smaller */
+.logoName {
+  font-size: 13px;
+  color: #D4AF37;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+}
+
+@media (min-width: 480px) {
+  .logoName {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoName {
+    display: none;
+  }
+}
+
+/* ===========================
+   DESKTOP NAVIGATION
+   =========================== */
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    gap: 48px;
+  }
+}
+
+.navLink {
+  color: #F8F5F0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .navLink {
+    font-size: 16px;
+  }
+}
+
+.navLink:hover {
+  color: #D4AF37;
+}
+
+/* Animated Underline */
+.navUnderline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37 0%, #EFE1C6 100%);
+  transition: width 0.4s ease-in-out;
+}
+
+.navLink:hover .navUnderline {
+  width: 100%;
+}
+
+/* ===========================
+   ACTION BUTTONS
+   =========================== */
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 480px) {
+  .actionButtons {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 640px) {
+  .actionButtons {
+    gap: 16px;
+  }
+}
+
+/* Icon Button */
+.iconButton {
+  background: transparent;
+  border: none;
+  color: #F8F5F0;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.4s ease-in-out;
+}
+
+.iconButton:hover {
+  color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.iconButton:active {
+  transform: scale(0.95);
+}
+
+/* Cart Button */
+.cartButton {
+  background: transparent;
+  border: none;
+  color: #F8F5F0;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.cartButton:hover {
+  color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.cartButton:active {
+  transform: scale(0.95);
+}
+
+/* Icon */
+.icon {
+  width: 16px;
+  height: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 480px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.iconButton:hover .icon,
+.cartButton:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Cart Badge */
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #D4AF37 0%, #c19820 100%);
+  color: #0C0C0C;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+}
+
+@media (min-width: 480px) {
+  .cartBadge {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    top: -2px;
+    right: -2px;
+  }
+}
+
+/* ===========================
+   MOBILE MENU
+   =========================== */
+
+.mobileMenu {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  background: rgba(12, 12, 12, 0.95);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 16px 12px;
+}
+
+@media (min-width: 480px) {
+  .mobileNav {
+    padding: 24px 16px;
+  }
+}
+
+.mobileNavItem {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.mobileNavItem:last-child {
+  border-bottom: none;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 12px 0;
+  color: #F8F5F0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+@media (min-width: 480px) {
+  .mobileNavLink {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}
+
+.mobileNavLink:hover {
+  color: #D4AF37;
+  padding-left: 8px;
+}
+
+.mobileNavLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #D4AF37 0%, #EFE1C6 100%);
+  transition: width 0.3s ease-in-out;
+}
+
+.mobileNavLink:hover::before {
+  width: 30px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 640px) {
+  .logoName {
+    display: none;
+  }
+
+  .logoImage {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContent {
+    height: 60px;
+    gap: 8px;
+  }
+
+  .actionButtons {
+    gap: 6px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .cartBadge {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+
+  .mobileNav {
+    padding: 12px;
+  }
+
+  .mobileNavLink {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  .logoImage {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logoSection {
+    gap: 12px;
+  }
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navLink {
+  animation: slideDown 0.4s ease-out;
+}
+
+.navLink:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.navLink:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.navLink:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.navLink:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .logoLink,
+  .navLink,
+  .iconButton,
+  .cartButton,
+  .mobileMenuBtn,
+  .mobileNavLink,
+  .navUnderline,
+  .logoImage {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Focus Styles */
+.navLink:focus,
+.iconButton:focus,
+.cartButton:focus,
+.mobileMenuBtn:focus,
+.mobileNavLink:focus {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}

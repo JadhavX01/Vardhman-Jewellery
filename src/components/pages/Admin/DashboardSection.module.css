@@ -1,0 +1,577 @@
+/* ========== DASHBOARD CONTAINER ========== */
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* ========== STATS GRID ========== */
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .statCard {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .statCard:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .statCardHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .iconWrapper {
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .changeBadge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #059669;
+    font-size: 12px;
+    font-weight: bold;
+    background: #d1fae5;
+    padding: 4px 8px;
+    border-radius: 9999px;
+  }
+  
+  .statValue {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 4px;
+    margin: 0 0 4px 0;
+  }
+  
+  .statTitle {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* ========== QUICK ACTIONS ========== */
+  .quickActionsCard {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+  }
+  
+  .quickActionsTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .titleAccent {
+    width: 6px;
+    height: 24px;
+    background: linear-gradient(to bottom, #f59e0b, #d97706);
+    border-radius: 9999px;
+    display: block;
+  }
+  
+  .actionsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .actionButton {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .actionButton span {
+    white-space: nowrap;
+  }
+  
+  /* Blue Action Button */
+  .actionButtonBlue {
+    background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+    border-color: #93c5fd;
+    color: #1e40af;
+  }
+  
+  .actionButtonBlue:hover {
+    background: linear-gradient(to bottom right, #bfdbfe, #93c5fd);
+  }
+  
+  .actionIconBlue {
+    padding: 12px;
+    background: #3b82f6;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .actionButton:hover .actionIconBlue {
+    transform: scale(1.05);
+  }
+  
+  /* Purple Action Button */
+  .actionButtonPurple {
+    background: linear-gradient(to bottom right, #f3e8ff, #e9d5ff);
+    border-color: #d8b4fe;
+    color: #7e22ce;
+  }
+  
+  .actionButtonPurple:hover {
+    background: linear-gradient(to bottom right, #e9d5ff, #d8b4fe);
+  }
+  
+  .actionIconPurple {
+    padding: 12px;
+    background: #a855f7;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .actionButton:hover .actionIconPurple {
+    transform: scale(1.05);
+  }
+  
+  /* Green Action Button */
+  .actionButtonGreen {
+    background: linear-gradient(to bottom right, #d1fae5, #a7f3d0);
+    border-color: #6ee7b7;
+    color: #047857;
+  }
+  
+  .actionButtonGreen:hover {
+    background: linear-gradient(to bottom right, #a7f3d0, #6ee7b7);
+  }
+  
+  .actionIconGreen {
+    padding: 12px;
+    background: #10b981;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .actionButton:hover .actionIconGreen {
+    transform: scale(1.05);
+  }
+  
+  /* ========== RESPONSIVE - TABLET (1024px and below) ========== */
+  @media (max-width: 1024px) {
+    .statsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  
+    .actionsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .statCard {
+      padding: 18px;
+    }
+  
+    .quickActionsCard {
+      padding: 20px;
+    }
+  }
+  
+  /* ========== RESPONSIVE - MOBILE (640px and below) ========== */
+  @media (max-width: 640px) {
+    .dashboardContainer {
+      gap: 20px;
+    }
+  
+    .statsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  
+    .statCard {
+      padding: 16px;
+      border-radius: 12px;
+    }
+  
+    .iconWrapper {
+      padding: 10px;
+    }
+  
+    .iconWrapper svg {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .changeBadge {
+      font-size: 11px;
+      padding: 3px 6px;
+    }
+  
+    .changeBadge svg {
+      width: 10px;
+      height: 10px;
+    }
+  
+    .statValue {
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+  
+    .statTitle {
+      font-size: 11px;
+    }
+  
+    .quickActionsCard {
+      padding: 16px;
+      border-radius: 12px;
+    }
+  
+    .quickActionsTitle {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .titleAccent {
+      width: 5px;
+      height: 20px;
+    }
+  
+    .actionsGrid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    .actionButton {
+      padding: 16px;
+      gap: 12px;
+      font-size: 13px;
+    }
+  
+    .actionIconBlue,
+    .actionIconPurple,
+    .actionIconGreen {
+      padding: 10px;
+    }
+  
+    .actionIconBlue svg,
+    .actionIconPurple svg,
+    .actionIconGreen svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  /* ========== RESPONSIVE - SMALL MOBILE (480px and below) ========== */
+  @media (max-width: 480px) {
+    .dashboardContainer {
+      gap: 16px;
+    }
+  
+    .statsGrid {
+      gap: 10px;
+    }
+  
+    .statCard {
+      padding: 14px;
+      border-radius: 10px;
+    }
+  
+    .statCardHeader {
+      margin-bottom: 12px;
+    }
+  
+    .iconWrapper {
+      padding: 9px;
+      border-radius: 10px;
+    }
+  
+    .iconWrapper svg {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .changeBadge {
+      font-size: 10px;
+      padding: 2px 5px;
+    }
+  
+    .changeBadge svg {
+      width: 9px;
+      height: 9px;
+    }
+  
+    .statValue {
+      font-size: 22px;
+    }
+  
+    .statTitle {
+      font-size: 10px;
+    }
+  
+    .quickActionsCard {
+      padding: 14px;
+      border-radius: 10px;
+    }
+  
+    .quickActionsTitle {
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+  
+    .titleAccent {
+      width: 4px;
+      height: 18px;
+    }
+  
+    .actionsGrid {
+      gap: 10px;
+    }
+  
+    .actionButton {
+      padding: 14px;
+      gap: 10px;
+      font-size: 12px;
+      border-radius: 10px;
+    }
+  
+    .actionIconBlue,
+    .actionIconPurple,
+    .actionIconGreen {
+      padding: 9px;
+      border-radius: 10px;
+    }
+  
+    .actionIconBlue svg,
+    .actionIconPurple svg,
+    .actionIconGreen svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  /* ========== RESPONSIVE - EXTRA SMALL MOBILE (400px and below) ========== */
+  @media (max-width: 400px) {
+    .dashboardContainer {
+      gap: 14px;
+    }
+  
+    .statsGrid {
+      gap: 8px;
+    }
+  
+    .statCard {
+      padding: 12px;
+      border-radius: 10px;
+    }
+  
+    .statCardHeader {
+      margin-bottom: 10px;
+    }
+  
+    .iconWrapper {
+      padding: 8px;
+      border-radius: 8px;
+    }
+  
+    .iconWrapper svg {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .changeBadge {
+      font-size: 9px;
+      padding: 2px 4px;
+    }
+  
+    .changeBadge svg {
+      width: 8px;
+      height: 8px;
+    }
+  
+    .statValue {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  
+    .statTitle {
+      font-size: 9px;
+    }
+  
+    .quickActionsCard {
+      padding: 12px;
+      border-radius: 10px;
+    }
+  
+    .quickActionsTitle {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+  
+    .titleAccent {
+      width: 4px;
+      height: 16px;
+    }
+  
+    .actionsGrid {
+      gap: 8px;
+    }
+  
+    .actionButton {
+      padding: 12px;
+      gap: 10px;
+      font-size: 11px;
+      border-radius: 8px;
+    }
+  
+    .actionIconBlue,
+    .actionIconPurple,
+    .actionIconGreen {
+      padding: 8px;
+      border-radius: 8px;
+    }
+  
+    .actionIconBlue svg,
+    .actionIconPurple svg,
+    .actionIconGreen svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  
+  /* ========== RESPONSIVE - MINIMUM 301px ========== */
+  @media (max-width: 320px) {
+    .dashboardContainer {
+      gap: 12px;
+    }
+  
+    .statsGrid {
+      gap: 8px;
+      grid-template-columns: 1fr;
+    }
+  
+    .statCard {
+      padding: 10px;
+      border-radius: 8px;
+    }
+  
+    .statCardHeader {
+      margin-bottom: 8px;
+    }
+  
+    .iconWrapper {
+      padding: 7px;
+      border-radius: 8px;
+    }
+  
+    .iconWrapper svg {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .changeBadge {
+      font-size: 9px;
+      padding: 2px 4px;
+    }
+  
+    .changeBadge svg {
+      width: 8px;
+      height: 8px;
+    }
+  
+    .statValue {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+  
+    .statTitle {
+      font-size: 9px;
+    }
+  
+    .quickActionsCard {
+      padding: 10px;
+      border-radius: 8px;
+    }
+  
+    .quickActionsTitle {
+      font-size: 13px;
+      margin-bottom: 10px;
+      gap: 6px;
+    }
+  
+    .titleAccent {
+      width: 3px;
+      height: 14px;
+    }
+  
+    .actionsGrid {
+      gap: 8px;
+    }
+  
+    .actionButton {
+      padding: 10px;
+      gap: 8px;
+      font-size: 11px;
+      border-radius: 8px;
+    }
+  
+    .actionButton span {
+      font-size: 10px;
+    }
+  
+    .actionIconBlue,
+    .actionIconPurple,
+    .actionIconGreen {
+      padding: 7px;
+      border-radius: 8px;
+    }
+  
+    .actionIconBlue svg,
+    .actionIconPurple svg,
+    .actionIconGreen svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
