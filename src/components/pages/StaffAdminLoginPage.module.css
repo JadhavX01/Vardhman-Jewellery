@@ -1,0 +1,653 @@
+/* ===========================
+   STAFF & ADMIN LOGIN PAGE - LUXURY THEME
+   Dark Glass Black + Royal Gold
+   =========================== */
+
+/* Root Container */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0C0C0C 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Card Container */
+.card {
+  background: rgba(12, 12, 12, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   BACK BUTTON SECTION
+   =========================== */
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: #D4AF37;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 12px;
+  animation: slideLeft 0.6s ease-out;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.backIcon {
+  width: 14px;
+  height: 14px;
+  transition: all 0.4s ease-in-out;
+}
+
+.backButton:hover {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #EFE1C6;
+  transform: translateX(-4px);
+}
+
+.backButton:active {
+  transform: translateX(-2px);
+}
+
+.backButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.backNote {
+  font-size: 11px;
+  color: rgba(248, 245, 240, 0.5);
+  margin: 0 0 20px 0;
+  text-align: center;
+  animation: fadeIn 0.6s ease-out 0.1s both;
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #F8F5F0;
+  margin: 0 0 10px 0;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5px;
+  animation: slideDown 0.6s ease-out 0.1s both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #D4AF37;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: slideDown 0.6s ease-out 0.2s both;
+}
+
+/* ===========================
+   ERROR ALERT
+   =========================== */
+
+.errorAlert {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.errorIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.errorAlert span:last-child {
+  color: #ff6b6b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===========================
+   FORM STRUCTURE
+   =========================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: slideDown 0.6s ease-out 0.15s both;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8F5F0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inputHint {
+  font-size: 11px;
+  color: rgba(248, 245, 240, 0.5);
+  margin: 4px 0 0 0;
+  font-weight: 500;
+}
+
+/* ===========================
+   INPUT STYLES
+   =========================== */
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(24, 24, 24, 0.6);
+  border: 1.5px solid rgba(212, 175, 55, 0.2);
+  border-radius: 6px;
+  color: #F8F5F0;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(248, 245, 240, 0.4);
+}
+
+.input:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(24, 24, 24, 0.8);
+}
+
+.input:focus {
+  border-color: #D4AF37;
+  background: rgba(24, 24, 24, 0.9);
+  box-shadow: inset 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.inputFocused {
+  border-color: #D4AF37;
+  background: rgba(24, 24, 24, 0.9);
+}
+
+.inputWithIcon {
+  padding-right: 44px;
+}
+
+.input:disabled {
+  background: rgba(12, 12, 12, 0.5);
+  color: rgba(248, 245, 240, 0.5);
+  cursor: not-allowed;
+  border-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Eye Icon Button */
+.eyeButton {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(248, 245, 240, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeButton:hover:not(:disabled) {
+  color: #D4AF37;
+}
+
+.eyeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.eyeIcon {
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.eyeButton:hover .eyeIcon {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+
+.submitBtn {
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #D4AF37 0%, #c19820 100%);
+  color: #0C0C0C;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  margin-top: 12px;
+  animation: slideDown 0.6s ease-out 0.25s both;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #E5C158 0%, #D4AF37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.submitBtnLoading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(12, 12, 12, 0.3);
+  border-top-color: #0C0C0C;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   CUSTOMER LOGIN SECTION WITH ANIMATIONS
+   =========================== */
+
+.customerSection {
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 20px;
+  animation: slideUp 0.6s ease-out 0.35s both;
+}
+
+.customerLabel {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(248, 245, 240, 0.6);
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.customerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  background: transparent;
+  color: #D4AF37;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out 0.35s both;
+}
+
+/* Customer Button Background Animation */
+.customerButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 175, 55, 0.08);
+  transition: left 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.customerButton:hover::before {
+  left: 0;
+}
+
+.customerButtonText {
+  position: relative;
+  z-index: 1;
+}
+
+.customerArrow {
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0);
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.customerButton:hover .customerArrow {
+  transform: translateX(6px);
+}
+
+.customerButton:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  color: #EFE1C6;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+}
+
+.customerButton:active {
+  transform: translateY(1px);
+}
+
+/* ===========================
+   HELP BOX
+   =========================== */
+
+.helpBox {
+  padding: 14px 16px;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
+  animation: slideUp 0.6s ease-out 0.4s both;
+}
+
+.helpText {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(248, 245, 240, 0.7);
+  line-height: 1.6;
+}
+
+.helpBold {
+  color: #D4AF37;
+  font-weight: 700;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+  }
+
+  .backButton {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .backIcon {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 25px 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .inputWithIcon {
+    padding-right: 40px;
+  }
+
+  .eyeIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .eyeButton {
+    right: 12px;
+  }
+
+  .submitBtn {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .customerSection {
+    padding: 16px 0;
+  }
+
+  .customerLabel {
+    font-size: 11px;
+  }
+
+  .customerButton {
+    padding: 11px 16px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .helpBox {
+    padding: 12px 14px;
+  }
+
+  .helpText {
+    font-size: 11px;
+  }
+
+  .backNote {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 20px 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .header {
+    margin-bottom: 25px;
+  }
+
+  .form {
+    gap: 18px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .submitBtn {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+
+  .customerButton {
+    padding: 10px 14px;
+    font-size: 11px;
+  }
+
+  .backButton {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .card,
+  .backButton,
+  .title,
+  .subtitle,
+  .formField,
+  .submitBtn,
+  .customerButton,
+  .helpBox,
+  .customerSection {
+    animation: none !important;
+  }
+
+  .input,
+  .submitBtn,
+  .backButton,
+  .eyeButton,
+  .customerButton {
+    transition: none !important;
+  }
+}

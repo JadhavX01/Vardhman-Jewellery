@@ -1,0 +1,522 @@
+/* ===========================
+   REGISTER PAGE - LUXURY THEME
+   Dark Glass Black + Royal Gold
+   =========================== */
+
+/* Root & Container */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--font-sans);
+}
+
+/* Main Card - Premium Gold Gradient Border */
+.mainCard {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2),
+              0 0 0 1px rgba(212, 175, 55, 0.1) inset;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 0;
+}
+
+.mainCard::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #D4AF37 0%, #c19820 50%, #D4AF37 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  animation: goldGlow 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===========================
+   HEADER SECTION
+   =========================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 25px;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 600;
+  background: linear-gradient(135deg, #D4AF37 0%, #EFE1C6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 12px 0;
+  font-family: var(--font-cursive);
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #D4AF37;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===========================
+   ERROR ALERT
+   =========================== */
+
+.errorAlert {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.errorIcon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.errorAlert span:last-child {
+  color: #ff6b6b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===========================
+   FORM STRUCTURE
+   =========================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #D4AF37;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F8F5F0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   INPUT & SELECT STYLES
+   =========================== */
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(24, 24, 24, 0.6);
+  border: 1.5px solid rgba(212, 175, 55, 0.2);
+  border-radius: 6px;
+  color: #F8F5F0;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(248, 245, 240, 0.4);
+}
+
+.input:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(24, 24, 24, 0.8);
+}
+
+.input:focus {
+  border-color: #D4AF37;
+  background: rgba(24, 24, 24, 0.9);
+  box-shadow: inset 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.inputFocused {
+  border-color: #D4AF37;
+  background: rgba(24, 24, 24, 0.9);
+}
+
+.input:disabled {
+  background: rgba(12, 12, 12, 0.5);
+  color: rgba(248, 245, 240, 0.5);
+  cursor: not-allowed;
+  border-color: rgba(212, 175, 55, 0.1);
+}
+
+/* Select Styling */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+  padding-right: 40px;
+}
+
+.select option {
+  background: #1a1a1a;
+  color: #F8F5F0;
+}
+
+/* Success Input State */
+.inputSuccess {
+  border-color: #51cf66;
+  background: rgba(81, 207, 102, 0.05);
+}
+
+.inputSuccess:focus {
+  border-color: #51cf66;
+  box-shadow: inset 0 0 0 2px rgba(81, 207, 102, 0.1);
+}
+
+/* Error Input State */
+.inputError {
+  border-color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.05);
+}
+
+.inputError:focus {
+  border-color: #ff6b6b;
+  box-shadow: inset 0 0 0 2px rgba(255, 107, 107, 0.1);
+}
+
+/* ===========================
+   PASSWORD STRENGTH INDICATOR
+   =========================== */
+
+.passwordStrength {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.strengthStrong {
+  color: #51cf66;
+  background: rgba(81, 207, 102, 0.1);
+}
+
+.strengthWeak {
+  color: #ffa94d;
+  background: rgba(255, 165, 77, 0.1);
+}
+
+/* ===========================
+   TWO COLUMN ROW (State + City)
+   =========================== */
+
+.twoColumnRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 576px) {
+  .twoColumnRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.relativePosition {
+  position: relative;
+}
+
+/* ===========================
+   CITY DROPDOWN
+   =========================== */
+
+.cityDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(24, 24, 24, 0.95);
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: -2px;
+}
+
+.cityOption {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: #F8F5F0;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-left: 3px solid transparent;
+}
+
+.cityOption:hover {
+  background: rgba(212, 175, 55, 0.08);
+  border-left-color: #D4AF37;
+  padding-left: 19px;
+}
+
+.noCities {
+  padding: 16px;
+  text-align: center;
+  color: rgba(248, 245, 240, 0.5);
+  font-size: 13px;
+}
+
+.citySelected {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #D4AF37;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* ===========================
+   SUBMIT BUTTON
+   =========================== */
+
+.submitBtn {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #D4AF37 0%, #c19820 100%);
+  color: #0C0C0C;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #E5C158 0%, #D4AF37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.submitBtnLoading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(12, 12, 12, 0.3);
+  border-top-color: #0C0C0C;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   LOGIN LINK
+   =========================== */
+
+.loginLink {
+  text-align: center;
+  color: rgba(248, 245, 240, 0.7);
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.loginLinkText {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.loginLinkText:hover {
+  color: #EFE1C6;
+  border-bottom-color: #D4AF37;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+  .mainCard {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  .mainCard {
+    padding: 25px 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .sectionTitle {
+    font-size: 14px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .submitBtn {
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mainCard {
+    padding: 20px 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+/* ===========================
+   SCROLLBAR STYLING
+   =========================== */
+
+.cityDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cityDropdown::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.cityDropdown::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 3px;
+}
+
+.cityDropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
